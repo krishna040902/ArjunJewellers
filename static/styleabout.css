@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background: url(ringbg3.jpg);
+    background-position: left;
+    background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+#ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #010101;
+}
+.li{
+    float: left;
+}
+.navbtn{
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-family: Oswald;
+    padding: 14px 16px;
+}
+li a:hover{
+    background-color: rgb(90, 89, 88);
+}
+.heading{
+    font-family: Montserrat;
+    font-size: 55px;
+    text-align: center;
+    margin: 15px 0px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    width: 600px;
+    font-family: MontSerrat;
+    font-size: 25px;
+    text-align: center;
+}
+img{
+    width: 30px;
+    transition: width 250ms;
+}
+img:hover{
+    width: calc(30px + 5px);
+}
+#follow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+@media screen and (max-width: 600px){
+    .heading{
+        font-size: 45px;
+    }
+    .content{
+        width: 400px;
+        font-size: 20px;
+    }
+}

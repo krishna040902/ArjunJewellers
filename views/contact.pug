@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    link(rel="stylesheet", href="static/stylecontact.css")
+</head>
+<body>
+    <header>
+        <ul id="ul">
+            <li class="li"><a class="navbtn" href="/">HOME</a></li>
+            <li class="li"><a class="navbtn" href="/shop">SHOP</a></li>
+            <li class="li"><a class="navbtn" href="/contact">CONTACT</a></li>
+            <li class="li"><a class="navbtn" href="/about">ABOUT</a></li>
+        </ul>
+    </header>
+    <p class="heading">Contact Us</p>
+    <div class="container">
+        <div class="contact">
+            <p class="contact-details">Owner: Avnish Singh</p>
+            <p class="contact-details"><img class="contacticon" src="static/download.png" alt="Sorry"><span>9335616276, 9415066143</span></p>
+            <p class="contact-details"><img class="contacticon" src="static/email.png" alt="Sorry"><span>avnishsingh776@gmail.com</span></p>
+            <p class="contact-details"><img class="contacticon" src="static/add2.png" alt="Sorry"><span>43/6 Nariyal Bazar, Chowk Sarafa,</span></p>
+            <p class="contact-details" style="justify-content: center;">Kanpur-208001</p>
+        </div>
+        <div class="form-container">
+            <p class="for-enquiry">For enquiry</p>
+            <form action="/contact" method="post" class="form" id="formform">
+                <div class="formitem">
+                    <label for="name">Name</label>
+                    <input class="input" id="name" name="name" type="text" required>
+                </div>
+                <div class="formitem">
+                    <label for="mobile">Mobile</label>
+                    <input class="input" id="mobile" name="mobile" type="phone" required>
+                </div>
+                <div class="formitem">
+                    <label for="email">E-mail</label>
+                    <input class="input" id="email" name="email" type="email" size="25" required>
+                </div>
+                <div class="formitem">
+                    <label for="msg">Your Message</label>
+                    <textarea name="msg" id="msg" cols="30" rows="5" required></textarea>
+                </div>
+                <div class="submit-button">
+                    <button type="submit" class="submit-link">Submit</button>
+                    //<a href="#" class="submit-link">Submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="followon">
+        |Follow On <span><a href="https://www.instagram.com/avnish.singh.73594/" target="_blank"><img class="followicon" src="static/insta_icon.png" alt="Sorry"></a></span>
+        <span><a href="https://www.youtube.com/channel/UCH9KuQ5PAGyNGbTr8q_PN3g" target="_blank"><img class="followicon" src="static/yt_icon.png" alt="Sorry"></a></span>
+    </p>
+</body>
+</html>

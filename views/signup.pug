@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    link(rel="stylesheet", href="static/stylesignup.css")
+</head>
+<body>
+    <header>
+        <ul id="ul">
+            <li class="li"><a class="navbtn" href="/">HOME</a></li>
+            <li class="li"><a class="navbtn" href="/shop">SHOP</a></li>
+            <li class="li"><a class="navbtn" href="/contact">CONTACT</a></li>
+            <li class="li"><a class="navbtn" href="/about">ABOUT</a></li>
+            <li class="li navright"><a class="navbtn" href="/signup">Sign Up</a></li>
+            <li class="li navright"><a class="navbtn" href="/login">Log In</a></li>
+            <li class="li navright"><a class="navbtn" href="/cart"><img class="cart" src="static/cart.png" alt="Sorry"></a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <p class="for-enquiry">Sign up here...</p>
+            <form action="/signup" method="post" class="form" id="formform">
+                <div class="formitem">
+                    <label for="name">Name</label>
+                    <input class="input" id="name" name="name" type="text" required>
+                </div>
+                <div class="formitem">
+                    <label for="mobile">Mobile</label>
+                    <input class="input" id="mobile" name="mobile" type="phone" required>
+                </div>
+                <div class="formitem">
+                    <label for="email">E-mail</label>
+                    <input class="input" id="email" name="email" type="email" size="25" required>
+                </div>
+                <div class="formitem">
+                    <label for="password">Password</label>
+                    <input class="input" id="password" name="password" type="password" size="25" required>
+                </div>
+                <div class="submit-button">
+                    <button type="submit" class="submit-link">Submit</button>
+                    //<a href="#" class="submit-link">Submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

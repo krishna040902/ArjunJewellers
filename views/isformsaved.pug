@@ -1,0 +1,23 @@
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title= title 
+    link(rel="stylesheet", href="static/styleisformsaved.css")
+  body
+    header
+      ul#ul
+        li.li
+          a.navbtn(href='/') HOME
+        li.li
+          a.navbtn(href='/shop') SHOP
+        li.li
+          a.navbtn(href='/contact') CONTACT
+        li.li
+          a.navbtn(href='/about') ABOUT
+    .card-container
+      .card
+        h1.heading= heading 
+        p.msg= message
+        a.ok(href='/contact') OK

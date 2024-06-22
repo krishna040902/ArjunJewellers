@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+}
+/* ----------------------------------------------------------------------------------------- */
+/* NAVIGATION BAR START*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+#ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #010101;
+}
+.li{
+    float: left;
+}
+.navright{
+    float: right;
+}
+.navbtn{
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-family: Oswald;
+    padding: 14px 16px;
+}
+li a:hover{
+    background-color: rgb(90, 89, 88);
+}
+
+/* NAVIGATION BAR END */
+/* -------------------------------------------------------------------------------------------- */
+/* SECTION START */
+.container_section{
+    width: 100%;
+    height: 56vw;
+    z-index: 1;
+    background: url(website_bg.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    
+}
+#title{
+    font-family: Fleur De Leah;
+    font-size: 10vw;
+    margin: 0;
+    color:rgb(245, 199, 72)
+}
+#tagline{
+    margin: 0;
+    font-family: Carattere;
+    font-size: 4vw;
+    text-align: center;
+    color: white;
+}
+#intro{
+    display: inline;
+    float: right;
+    margin: 7vw 4vw 0px 0px;
+}
+#item_list{
+    margin-top: 45px;
+    display: inline-block;
+    color:rgb(214, 158, 5);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: italic;
+    font-weight: lighter;
+}
+.item{
+    font-family: Roboto;
+    font-size: 1.7vw;
+    margin: 10px 0px;
+}
+#ring{
+    width: 16vw;
+    
+}
+#btn_container{
+    display: inline;
+    list-style-type: none;
+    padding: 0;
+    margin-right: 4vw;
+    margin-top: 4vw;
+    
+}
+li.btn a{
+    text-decoration: none;
+    color:rgb(214, 158, 5);
+    border: 1px solid rgb(214, 158, 5);
+    padding: 1vw 1.2vw;
+    font-family: Roboto;
+    font-size: 1.7vw;
+}
+li.btn a:hover{
+    background-color: rgb(214, 158, 5);
+    color: black;
+}
+#shop_now{
+    display: flex ;
+    justify-content: end;
+    margin-top: 3vw;
+    gap: 4vw;
+}
+.btn{
+    display: inline;
+}
+/* SECTION END */
+/* ------------------------------------------------------------------------------------------ */
+/*COLLECTION DIV START*/
+#coll_head{
+    font-family: MontSerrat;
+    text-align: center;
+    font-size: 34px;
+    background-color: burlywood;
+}
+.collection{
+    margin-top: 0px;
+}
+/*card div styling*/
+.card_container{
+    background: url(coll_bg2.jpg);
+    width: 100%;
+    height: 495px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+.card{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 175px 175px 50px;
+    grid-template-areas: "image" "text" "btn";
+    height: 400px;
+    color: black;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px rgb(214, 158, 5);
+    margin: 10px;
+}
+.card_image{
+    grid-area: image;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card_text{
+    grid-area: text;
+    border-bottom: 1px solid rgb(214, 158, 5);
+    border-top: 1px solid rgb(214, 158, 5);
+}
+.card_btn{
+    grid-area: btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#earring{
+    background: url(earrings.jpg);
+}
+#nosepin{
+    background: url(nosepin.jpg);
+}
+#nosering{
+    background: url(nosering.jpg);
+}
+.card_heading{
+    font-family: Carattere;
+    font-size: 32px;
+    margin: 10px 0px 0px 0px;
+}
+.card_detail{
+    font-family: Montserrat;
+    font-size: 16px;
+    
+    margin: 10px;
+}
+.view_all{
+    list-style-type: none;
+}
+.view_all_link{
+    text-decoration: none;
+    font-family: Roboto;
+    color: rgb(214, 158, 5);
+    border: 1px solid rgb(214, 158, 5);
+    padding: 5px 7px;
+}
+.view_all_link:hover{
+    background-color: rgb(214, 158, 5);
+    color: white;
+}
+/* COLLECTION DIV END */
+/* ------------------------------------------------------------------------------------------ */
+/* Signup Modal styles */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 500px){
+    .card_container{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: normal;
+    }
+    .container_section{
+        background: linear-gradient(to bottom right, rgb(17, 17, 17), rgb(75, 75, 74));;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150vw;
+    }
+    #intro{
+        margin: 0px;
+        padding: 0px
+    }
+    #tagline{
+        font-size: 8vw;
+    }
+    .item{
+        font-size: 3.6vw;
+    }
+    #shop_now{
+        justify-content: center;
+        align-items: center;
+    }
+    #title{
+        font-size: 16vw;
+    }
+    li.btn a{
+        font-size: 3.6vw;
+    }
+    #ring{
+        display: none;
+    }
+    #coll_head{
+        font-size: 5vw;
+    }
+}
+@media screen and (max-width: 800px) and (min-width: 501px){
+    .card_container{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: normal;
+    }
+    .container_section{
+        background: linear-gradient(to bottom right, rgb(17, 17, 17), rgb(75, 75, 74));;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vw;
+    }
+    #intro{
+        margin: 0px;
+        padding: 0px
+    }
+    #tagline{
+        font-size: 8vw;
+    }
+    .item{
+        font-size: 3.3vw;
+    }
+    #shop_now{
+        justify-content: center;
+        align-items: center;
+    }
+    #title{
+        font-size: 16vw;
+    }
+    li.btn a{
+        font-size: 3.3vw;
+    }
+    #ring{
+        display: none;
+    }
+    #coll_head{
+        font-size: 5vw;
+    }
+}
+
+
+/* ---------CUSTOM SCROLL BAR---------- */
+/* Hide the scrollbar by default */
+/* Hide the scrollbar by default */
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Show the scrollbar when scrolling or when mouse is hovered on scrollbar area */
+body::-webkit-scrollbar {
+width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Define the scrollbar track (transparent in this case) */
+body::-webkit-scrollbar-track {
+background-color: black;
+}
+
+/* Define the scrollbar thumb style with a box shadow */
+body::-webkit-scrollbar-thumb {
+background-color: #888; /* Set the color of the scrollbar thumb */
+border-radius: 6px; /* Set the radius to make it round */
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
+}
+
+/* Optional: Hover effect on the scrollbar thumb */
+body::-webkit-scrollbar-thumb:hover {
+background-color: #555; /* Set the color on hover */
+}
