@@ -4,5 +4,4 @@ shop1.js
 signup.css
 *.csv
 node_modules
-/uploads/*
-!/uploads/.gitkeep
+uploads/*
