@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 
 const app = express();
@@ -17,12 +19,14 @@ const checkoutRouter = require('./routes/checkout')
 const User = require('./models/user')
 
 const hostname = '127.0.0.1';
-const port = 80;
+const port = process.env.PORT;
 
 //const bodyParser = require('body-parser')
 
 //MongoDb Connection, Schema and Model-Mongoose
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
+
 mongoose.connect('mongodb://localhost/ArjunJewellers', {useNewUrlParser: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
