@@ -5,3 +5,4 @@ signup.css
 *.csv
 node_modules
 uploads/*
+!uploads/.gitkeep
