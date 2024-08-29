@@ -5,7 +5,15 @@ var schema = new mongoose.Schema({
     name: String,
     mobile: Number,
     email: String,
-    password: String
+    address: String,
+    password: String,
+    cart: [{
+        number: Number,
+        weight: String,
+        price: String,
+        image_address: String
+    }],
+    orders: [String] 
 }, {collection: 'Users'});
 var User = mongoose.model('Users', schema);
 

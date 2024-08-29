@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('stylenavbar.css');
 body{
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@ body{
     font-family: Montserrat;
     /* overflow: hidden; */
 }
-header{
+/* header{
     position: sticky;
     top: 0;
     z-index: 2;
@@ -39,9 +40,9 @@ header{
 }
 li a:hover{
     background-color: rgb(90, 89, 88);
-}
+} */
 .heading{
-    font-family: Roboto;
+    font-family: Montserrat;
     font-size: 41px;
     letter-spacing: 1px;
     margin: 10px;
@@ -97,6 +98,10 @@ button {
     border-radius: 4px;
     cursor: pointer;
   }
+
+.darkened {
+    background-color: #026505; /* Darker shade of the button */
+}
 
 @media screen and (max-width: 600px) {
     .card {

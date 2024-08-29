@@ -1,0 +1,16 @@
+@import url(styleshop.css);
+
+.footerbtns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.remove{
+    background-color: rgb(216, 27, 27);
+
+}
+
+.darkened{
+    background-color: rgb(149, 4, 4);
+}

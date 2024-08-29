@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('stylenavbar.css');
+body{
+    margin: 0;
+    padding: 0;
+    background: url(ringbg3.jpg);
+    background-position: left;
+    background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.heading{
+    font-family: Montserrat;
+    font-size: 4vw;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.container{
+    display:  flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: white;
+    color: black;
+    font-family: Montserrat;
+    /* The below two properties(widht and margin) are very important
+    otherwise the container will take full widht of screen */
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.leftsection{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    border-right: 1px solid black;
+}
+
+.rightsection{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 14px 12px;
+}
+
+.userpng{
+    width: 20vh;
+}
+
+.infoheading{
+    border-bottom: 1px solid black;
+}
+
+table{
+    border-bottom: 1px solid black;
+}
+
+.profilebtns{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.logoutbtn{
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.logoutbtn:hover{
+    background-color: red;
+    color: white;
+}
+
+.updatebtn{
+    background-color: rgb(15, 160, 15);
+    color: white;
+    border: 1px solid rgb(15, 160, 15);
+    border-radius: 5px;
+    padding: 5px;
+}

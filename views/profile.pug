@@ -1,0 +1,26 @@
+extends navbar 
+block title 
+    | Your Profile 
+block css 
+    link(rel='stylesheet', href='/static/styleprofile.css')
+
+block content 
+    p.heading Your Profile
+    .container 
+        .leftsection 
+            img.userpng(src="static/userprofile1.png", alt="User")
+            p.item #{username} 
+        .rightsection
+            h4.infoheading Information
+            table 
+                tr 
+                    td Mobile: #{mobile}
+                    td Email: #{email}
+                tr 
+                    td Address: #{address}
+                    td Cart Items: #{cart}
+            .profilebtns 
+                button.updatebtn Update Profile
+                a.logoutbtn(href="/logout") Logout
+            
+        

@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title
+        block title
+    block css
+    block scripts
+  body
+    header
+      ul#ul
+        li.li
+          a.navbtn(href='/') HOME
+        li.li
+          a.navbtn(href='/shop') SHOP
+        li.li
+          a.navbtn(href='/contact') CONTACT
+        li.li
+          a.navbtn(href='/about') ABOUT
+        if !user
+          li.li.navright
+            a.navbtn(href='/signup') Sign Up
+          li.li.navright
+            a.navbtn(href='/login') Log In
+        if user 
+          li.li.navright
+            a.navbtn(href='/logout') Logout
+          li.li.navright
+            a.navbtn(href='/profile') User : #{username}
+        li.li.navright
+          a.navbtn(href='/cart') Cart
+            //- img.cart(src='static/cart.png', alt='Sorry')
+    block content

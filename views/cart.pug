@@ -1,0 +1,22 @@
+extends navbar
+
+block title
+  | Cart
+
+block css
+  link(rel='stylesheet', href='/static/stylecart.css')
+
+block content
+  p.heading Your cart
+  ul 
+    each item in items
+      .card
+          img(src=item.image_address, alt=`Image for ${item.number}`)
+          p Item no.: #{item.number}
+          p Weight: #{item.weight}
+          p Price: #{item.price}
+          button.remove(type="button") Remove
+  .footerbtns
+    p#totalprice Your total : Rs. #{totalprice}
+    button#checkoutbtn(type="button") Checkout
+  script(src="/static/jscart.js") 

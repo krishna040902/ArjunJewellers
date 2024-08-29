@@ -1,0 +1,57 @@
+extends navbar
+
+block title
+  | Checkout
+
+block css
+  link(rel='stylesheet', href='/static/stylecheckout.css')
+
+block content
+  form(action="/checkout" method="POST" enctype="multipart/form-data")
+    .container 
+      .section 
+        p.heading Order Details 
+        .items
+          .item-container
+            p.item Name: #{username}
+            p.item Email: #{email}
+            p.item Phone: #{mobile}
+            p.item Address: #{address}
+          button(type="button") OK
+      .section
+        p.heading Payment 
+        .items
+          h3(style="text-align: center") Total : #{totalprice}
+          .radio-container
+            .radio-group
+              input(type="radio", name="payment", id="cod", value="cod", onchange="handlePaymentChange()")
+              label(for="cod") Cash on Delivery
+            .radio-group
+              input(type="radio", name="payment", id="netbanking", value="netbanking", onchange="handlePaymentChange()")
+              label(for="netbanking") Net Banking
+            //- Net Banking Section
+            #netbanking-section(style="display: none; ")
+              h4 Kotak Mahindra Bank
+              p.nb-item Account No: 4646613747
+              p.nb-item Account Holder: Krishna Singh 
+              p.nb-item IFSC: KKBK0005133
+              p Upload screenshot
+              input.upload(type="file", name="netbanking-screenshot", accept="image/*")
+            .radio-group
+              input(type="radio", name="payment", id="upi", value="upi", onchange="handlePaymentChange()")
+              label(for="upi") UPI
+            //- UPI Section
+            #upi-section(style="display: none;")
+              p Scan this QR code to make payment:
+              img(src='/static/qr_code_small.jpg', alt='UPI QR Code')
+              p Upload screenshot
+              input.upload(type="file", name="upi-screenshot", accept="image/*")
+          
+
+
+          button(type="submit") Confirm Order
+
+block scripts
+  script(src='/static/jscheckout.js')
+
+      

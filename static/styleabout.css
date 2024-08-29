@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('stylenavbar.css');
 body{
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-header{
+/* header{
     position: sticky;
     top: 0;
     z-index: 2;
@@ -34,7 +35,7 @@ header{
 }
 li a:hover{
     background-color: rgb(90, 89, 88);
-}
+} */
 .heading{
     font-family: Montserrat;
     font-size: 55px;

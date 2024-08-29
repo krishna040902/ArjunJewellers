@@ -5,7 +5,7 @@ const form = require('../models/contactForm');
 const router = express.Router();
 
 router.get('/', async (req, res)=>{
-    res.status(200).render('contact')
+    res.status(200).render('contact', { user : req.session.isAuth, username : req.session.username})
 });
 router.post('/', async (req, res)=>{
     var myData = new form(req.body)

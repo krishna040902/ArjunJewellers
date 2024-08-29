@@ -1,0 +1,49 @@
+@import url(styleshop.css);
+
+.container{
+    display: flex;
+    font-family: Montserrat;
+    justify-content: space-evenly;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.items{
+    padding: 12px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.item{
+    border-bottom: 1px solid #ccc;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ccc; /* Adjust border color and style as needed */
+    padding-bottom: 10px; /* Optional: Add padding for spacing */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+}
+
+.nb-item {
+    text-align: center;
+}
+
+.upload {
+    margin-bottom: 8px;
+    width: 100%;
+    border-bottom: 1px solid #ccc; /* Adjust border color and style as needed */
+    padding-bottom: 10px;
+}

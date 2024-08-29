@@ -1,54 +1,47 @@
-html 
-    head
-        meta(charset='UTF-8')
-        meta(http-equiv='X-UA-Compatible' content='IE=edge')
-        meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        title Shop
-        link(rel="stylesheet", href="static/styleshop.css")
-    body
-        header
-            ul#ul
-                li.li
-                    a.navbtn(href='/') HOME
-                li.li
-                    a.navbtn(href='/shop') SHOP
-                li.li
-                    a.navbtn(href='/contact') CONTACT
-                li.li
-                    a.navbtn(href='/about') ABOUT
-        h1.heading Earrings
-        ul
-            //- each earring in earrings
-            //-     li= earring.number + ' - ' + earring.weight + ' - ' + earring.price
-            //- each nosepin in nosepins
-            //-     li= nosepin.number + ' - ' + nosepin.weight + ' - ' + nosepin.price
-            //- each nosering in noserings
-            //-     li= nosering.number + ' - ' + nosering.weight + ' - ' + nosering.price
-            each earring in earrings
-                .card
-                    img(src=earring.image_address, alt=`Image for ${earring.number}`)
-                    p Item no.: #{earring.number}
-                    p Weight: #{earring.weight}
-                    p Price: #{earring.price}
-                    button(type="button") Add to Cart
-        
-        h1.heading Nosepins
-        ul
-            each nosepin in nosepins
-                .card
-                    img(src=nosepin.image_address, alt=`Image for ${nosepin.number}`)
-                    p Item no.: #{nosepin.number}
-                    p Weight: #{nosepin.weight}
-                    p Price: #{nosepin.price}
-                    button(type="button") Add to Cart
-        
-        h1.heading Noserings
-        ul
-            each nosering in noserings
-                .card
-                    img(src=nosering.image_address, alt=`Image for ${nosering.number}`)
-                    p Item no.: #{nosering.number}
-                    p Weight: #{nosering.weight}
-                    p Price: #{nosering.price}
-                    button(type="button") Add to Cart
-        
+extends navbar
+
+block title
+  | Shop
+
+block css
+  link(rel='stylesheet', href='/static/styleshop.css')
+
+block content
+    h1.heading Earrings
+    ul
+        //- each earring in earrings
+        //-     li= earring.number + ' - ' + earring.weight + ' - ' + earring.price
+        //- each nosepin in nosepins
+        //-     li= nosepin.number + ' - ' + nosepin.weight + ' - ' + nosepin.price
+        //- each nosering in noserings
+        //-     li= nosering.number + ' - ' + nosering.weight + ' - ' + nosering.price
+        each earring in earrings
+            .card
+                img(src=earring.image_address, alt=`Image for ${earring.number}`)
+                p Item no.: #{earring.number}
+                p Weight: #{earring.weight}
+                p Price: #{earring.price}
+                button(type="button") Add to Cart
+    
+    h1.heading Nosepins
+    ul
+        each nosepin in nosepins
+            .card
+                img(src=nosepin.image_address, alt=`Image for ${nosepin.number}`)
+                p Item no.: #{nosepin.number}
+                p Weight: #{nosepin.weight}
+                p Price: #{nosepin.price}
+                button(type="button") Add to Cart
+    
+    h1.heading Noserings
+    ul
+        each nosering in noserings
+            .card
+                img(src=nosering.image_address, alt=`Image for ${nosering.number}`)
+                p Item no.: #{nosering.number}
+                p Weight: #{nosering.weight}
+                p Price: #{nosering.price}
+                button(type="button") Add to Cart
+    
+    script(src="/static/jsshop.js") 
+    
